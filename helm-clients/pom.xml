@@ -11,8 +11,6 @@
     <artifactId>helm-clients</artifactId>
 
     <properties>
-        <username>dock999evg</username>
-        <password>Aa123456</password>
         <helmChartVersion>201-dev</helmChartVersion>
         <imageVer>${imageVer}</imageVer>
     </properties>
@@ -32,7 +30,7 @@
                         <image>
                             <alias>clients</alias>
                             <name>clients</name>
-                            <registry>docker.io/dock999evg</registry>
+                            <registry>${registry}</registry>
                             <build>
                                 <dockerFile>${project.basedir}/Dockerfile</dockerFile>
                                 <tags>
@@ -105,7 +103,7 @@
                                 <argument>
                                     ${project.build.directory}/helm/${project.parent.artifactId}-${helmChartVersion}.tgz
                                 </argument>
-                                <argument>oci://registry-1.docker.io/dock999evg</argument>
+                                <argument>${oci-url}</argument>
                             </arguments>
                         </configuration>
                     </execution>
