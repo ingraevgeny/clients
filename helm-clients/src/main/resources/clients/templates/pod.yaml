@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: clients
+  labels:
+    app: clients
+spec:
+  hostname: clients
+  containers:
+    - name: {{ .Chart.Name }}
+      image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+      imagePullPolicy: Always
+      ports:
+        - containerPort: 8081
