@@ -6,5 +6,6 @@ import java.util.List;
 
 public interface ClientService {
     Client createClient(Client client);
+    List<Client> createAllClients(List<Client> client);
     List<Client> getAll();
 }

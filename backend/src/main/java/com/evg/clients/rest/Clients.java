@@ -35,7 +35,7 @@ public class Clients {
         }
     }
 
-    @GetMapping("/gteAll")
+    @GetMapping("/app/getAll")
     public ResponseEntity<String> getAll() {
         try {
             return new ResponseEntity<>(
