@@ -5,5 +5,5 @@ export interface Client {
   firstName: string;
   lastName: string;
   fullName: string;
-  address: Array<Address>;
+  address: Address[];
 }

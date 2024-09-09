@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import {ClientView} from "./client-view/client-view.component";
-
+import {ClientViewComponent} from "./components/client-view/client-view.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ClientView],
+  imports: [RouterOutlet, ClientViewComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

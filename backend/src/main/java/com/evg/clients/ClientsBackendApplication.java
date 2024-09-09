@@ -49,7 +49,7 @@ public class ClientsBackendApplication {
                     "fullName": "George Trump",
                     "address": [
                       {
-                        "fullAddress": "32, Manhattan st, New York, USA",
+                        "fullAddress": "47, Brooklyn, New York, USA",
                         "addressType": "Job"
                       },
                       {
@@ -64,7 +64,7 @@ public class ClientsBackendApplication {
                     "fullName": "Lenny Kratzer",
                     "address": [
                       {
-                        "fullAddress": "32, Manhattan st, New York, USA",
+                        "fullAddress": "56, Hollywood st, LA, USA",
                         "addressType": "Job"
                       },
                       {
@@ -79,7 +79,22 @@ public class ClientsBackendApplication {
                     "fullName": "Mike Portnoy",
                     "address": [
                       {
-                        "fullAddress": "32, Manhattan st, New York, USA",
+                        "fullAddress": "7645, Long Island, NY, USA",
+                        "addressType": "Job"
+                      },
+                      {
+                        "fullAddress": "47, Brooklyn, New York, USA",
+                        "addressType": "Home"
+                      }
+                    ]
+                  },
+                  {
+                    "firstName": "John",
+                    "lastName": "Petrucci",
+                    "fullName": "John Petrucci",
+                    "address": [
+                      {
+                        "fullAddress": "245, Long Island, NY, USA",
                         "addressType": "Job"
                       },
                       {
@@ -89,8 +104,8 @@ public class ClientsBackendApplication {
                     ]
                   }
               ]
-              """, new TypeReference<List<Client>>() {
-          });
+              """, new TypeReference<>() {
+              });
       clientService.createAllClients(clients);
     };
   }

@@ -6,11 +6,12 @@ import {Client} from "../model/client";
   providedIn: 'root'
 })
 export class ClientDataService {
-  getAllUrl = "/app/getAll";
+  getAllUrl = "/clients/getAll";
+  getOrdersUrl = "http://localhost:9898/orders/get";
 
   constructor(private http: HttpClient) {}
 
   getAllClients() {
-    return this.http.get<Array<Client>>(this.getAllUrl);
+    return this.http.get<Client[]>(this.getAllUrl);
   }
 }
